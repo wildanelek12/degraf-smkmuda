@@ -179,7 +179,7 @@
                     </li>
                     <li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('siswa/forum') ?>">
+                        <a class="nav-link" href="<?= base_url('siswa/forumSiswa') ?>">
                             <i class="material-icons">forum</i>
                             <span><?= $data['forum'] ?></span>
                         </a>

@@ -17,7 +17,6 @@
                             <tr>
                                 <th>NO</th>
                                 <th>NAMA</th>
-                                <th>TOTAL SISWA</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -32,10 +31,8 @@
                                         <?= $row->nama_kelompok ?>
                                     </td>
                                     <td>
-                                        <?= $row->nama_kelompok ?>
-                                    </td>
-                                    <td>
                                         <a href="<?= base_url('guru/showSiswaKelompok/' . $row->id_kelompok.'/'.$kelompok[1]) ?>" class="btn bg-green waves-effect">Tambah Anggota Kelompok</a>
+                                        <a href="<?= base_url('guru/showChat/' . $row->id_kelompok) ?>" class="btn bg-green waves-effect">Lihat Chat</a>
                                     </td>
                                 </tr>
                             <?php

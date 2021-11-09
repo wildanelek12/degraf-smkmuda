@@ -66,19 +66,24 @@ class Siswa extends CI_Controller
             redirect($this->uri->uri_string());
         }
     }
-    public function forum()
-    {
-        $data['forum'] = $this->model_presensi->getForum();
-        $this->load->view('templates/header');
-        $this->load->view('forum', $data);
-        $this->load->view('templates/footer');
-    }
     public function addForum($id_kelompok)
     {
         if (isset($_POST['tambah'])) {
             $this->model_presensi->addForum($id_kelompok);
         }
         redirect('siswa/kelompokChatComplete/'.$id_kelompok);
+    }
+    public function addForumSiswa()
+    {    
+        $this->model_presensi->addForumSiswa();
+        redirect('siswa/forumSiswa');
+    }
+    public function forumSiswa()
+    {
+        $data['forum_siswa'] = $this->model_presensi->getForumSiswa();
+        $this->load->view('templates/header');
+        $this->load->view('forum', $data);
+        $this->load->view('templates/footer');
     }
     public function kuis()
     {

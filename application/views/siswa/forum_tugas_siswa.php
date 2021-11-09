@@ -37,7 +37,11 @@
                                     </div>
                                     <div class="body">
                                         <!-- cols="87" -->
-                                        <?php echo $row->isi;?>
+                                        <?php echo $row->isi;?> <br>
+                                        <?php if($row->berkas != null)
+                                    { ?>
+                                    <a href="<?= base_url('/upload/forum/') . $row->berkas ?>" target="_blank" download class="btn btn-xs btn-primary"><?php echo  $row->berkas ?></a>
+                                    <?php } ?>
                                     </div>
                                 </div>
                             </div>
@@ -53,9 +57,12 @@
                                         <h4><?= $row->nama ?></h4>
                                     </div>
                                     <div class="body">
-                                        <textarea name="" id="" rows="5" style="width: 100%; resize: none; overflow-y: auto; border: 0px; outline: none;" readonly><?= $row->isi ?>
-                                        </textarea>
-                                    </div>
+                                    <?php echo $row->isi;?><br>
+                                    <?php if($row->berkas != null)
+                                    { ?>
+                                    <a href="<?= base_url('/upload/forum/') . $row->berkas ?>" target="_blank" download class="btn btn-xs btn-primary"><?php echo  $row->berkas ?></a>
+                                    <?php } ?>
+                                </div>
                                 </div>
                             </div>
                         </div>

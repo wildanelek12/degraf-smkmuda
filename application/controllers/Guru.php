@@ -73,6 +73,13 @@ class Guru extends CI_Controller
             }
         }
     }
+    public function showChat($id_kelompok)
+    {
+        $forum['forum'] = [$this->model_presensi->getGroupChatValue($id_kelompok),$id_kelompok];
+        $this->load->view('templates/header');
+        $this->load->view('siswa/forum_tugas_siswa', $forum);
+        $this->load->view('templates/footer');
+    }
     public function detailKumpul($id)
     {
         $data['id_tugas'] = $id;
