@@ -3,21 +3,14 @@
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="card">
             <div class="header">
-                <?php
-                if ($this->session->userdata('role') == 1) {
-                ?>
-
-                    <h1>
-                        JAWAB SISWA
-                    </h1>
-                <?php
-                } elseif ($this->session->userdata('role') == 2) {
-                ?>
-                    <h1>
-                        TANYA GURU
-                    </h1>
-                <?php
-                } ?>
+                <h1>  <?php   $this->db->where('id_kelompok',$forum[1]); 
+                             $query =  $this->db->get('kelompok')->result();
+                             
+                             foreach($query as $item)
+                             {
+                                 echo $item->nama_kelompok;
+                             }
+                             ?></h1>
             </div>
 
             <div class="body">

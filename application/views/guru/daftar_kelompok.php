@@ -32,7 +32,7 @@
                                     </td>
                                     <td>
                                         <a href="<?= base_url('guru/showSiswaKelompok/' . $row->id_kelompok.'/'.$kelompok[1]) ?>" class="btn bg-green waves-effect">Tambah Anggota Kelompok</a>
-                                        <a href="<?= base_url('guru/showChat/' . $row->id_kelompok) ?>" class="btn bg-green waves-effect">Lihat Chat</a>
+                                        <a href="<?= base_url('guru/showChat/' . $row->id_kelompok.'/'.$row->nama_kelompok) ?>" class="btn bg-green waves-effect">Lihat Chat</a>
                                     </td>
                                 </tr>
                             <?php
