@@ -68,9 +68,9 @@
                                     <td>' . $c[0] . '</td><td>';
 
                             for ($i = 0; $i < sizeof($c); $i++) {
-                                $d = explode(':', $c[1]);
-                                $d0 = $d[0];
-                                $d1 = $d[1];
+                                $d = explode(':', $c[$i]);
+                                $d0 = $d[$i];
+                                $d1 = $d[$i];
                             }
                             echo $d0 . '<td>' . $d1 . '</td></tr>';
                         }
